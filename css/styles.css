@@ -1,0 +1,205 @@
+/* Giao diện website và cây quan hệ. Quy tắc responsive ở cuối mỗi nhóm. */
+html { scroll-behavior: smooth; color-scheme: light; }
+body { margin: 0; background: #f7f3e8; }
+button, summary, a { cursor: pointer; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #b58a3a; outline-offset: 4px; }
+#ncl-demo { max-width: 1440px; margin: 0 auto; }
+
+#ncl-demo{--paper:light-dark(#f7f3e8,#211f1b);--ink:light-dark(#292820,#eee8dc);--quiet:light-dark(#706c61,#bbb3a3);--rule:light-dark(#d9d1bf,#514b3f);--panel:light-dark(#fffdf6,#2c2923);--wine:light-dark(#852c2e,#e5a09b);--tint:light-dark(#ede5d4,#373127);background:var(--paper);color:var(--ink);font:15px/1.7 'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;overflow-wrap:anywhere}
+#ncl-demo *{box-sizing:border-box}#ncl-demo a{color:inherit;text-decoration:none}#ncl-demo button{font:inherit;white-space:normal}#ncl-demo h1,#ncl-demo h2,#ncl-demo h3,#ncl-demo p{margin:0}#ncl-demo h1,#ncl-demo h2,#ncl-demo h3{font-family:'Lora','Times New Roman',Times,Cambria,serif;font-weight:600;line-height:1.25;letter-spacing:normal}#ncl-demo h2{font-size:38px;letter-spacing:normal}#ncl-demo h3{font-size:24px;letter-spacing:normal}#ncl-demo em{color:var(--wine)}#ncl-demo p{margin:12px 0}#ncl-demo .muted{color:var(--quiet)}#ncl-demo .eyebrow{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--wine);margin-bottom:18px}#ncl-demo .ncl-nav{display:flex;gap:24px;align-items:center;justify-content:space-between;padding:22px 38px;border-bottom:1px solid var(--rule)}#ncl-demo .brand{font-size:20px;font-weight:700;letter-spacing:0.5px}#ncl-demo .brand span{color:var(--wine)}#ncl-demo .brand small{display:block;font-size:9px;letter-spacing:1px}#ncl-demo nav{display:flex;gap:22px;flex-wrap:wrap;font-size:12px}#ncl-demo nav a:hover,#ncl-demo footer a:hover{color:var(--wine)}#ncl-demo .edition{font-size:11px;letter-spacing:0.5px;color:var(--quiet)}#ncl-demo .hero{padding:60px 50px;display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}#ncl-demo h1{font-size:clamp(54px,7vw,90px);letter-spacing:normal;line-height:1.08}#ncl-demo .hero-sub{font-size:19px;margin-top:28px}#ncl-demo .hero .muted{max-width:360px}#ncl-demo .action{display:inline-flex;gap:28px;align-items:center;padding:12px 18px;margin-top:18px;font-size:13px}#ncl-demo .solid{background:var(--wine);color:var(--paper)}#ncl-demo .hero-art{background:#78282b;color:#f9edcf;min-height:400px;position:relative;padding:28px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}#ncl-demo .art-index{font-size:10px;letter-spacing:1px;position:relative;z-index:1}#ncl-demo .hero-art blockquote{font:italic 32px/1.35 'Lora','Times New Roman',Times,serif;margin:75px 0 25px;letter-spacing:normal;z-index:1}#ncl-demo .art-foot{font-size:10px;letter-spacing:0.5px;z-index:1}#ncl-demo .art-foot span{opacity:.75;letter-spacing:0}#ncl-demo .rings{position:absolute;right:-80px;top:15px;width:320px;height:320px;border:1px solid #b97564;border-radius:50%}#ncl-demo .rings div{position:absolute;border:1px solid #b97564;border-radius:50%;inset:25px}#ncl-demo .rings div:nth-child(2){inset:55px}#ncl-demo .rings div:nth-child(3){inset:85px}#ncl-demo .rings span{position:absolute;left:72px;top:65px;font:80px 'Lora','Times New Roman',Times,serif;color:#b97564;opacity:.45;transform:rotate(-20deg)}#ncl-demo .journey{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:20px 38px;font-size:12px}#ncl-demo .journey>span{font-size:10px;letter-spacing:0.5px;color:var(--quiet)}#ncl-demo .section{padding:64px 38px}#ncl-demo .section-top{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:32px}#ncl-demo .section-top>p{font-size:13px;max-width:280px}#ncl-demo .map-shell{display:grid;grid-template-columns:1.45fr 1fr;border:1px solid var(--rule)}#ncl-demo .map-canvas{padding:26px 20px;background-image:radial-gradient(var(--rule) .8px,transparent .8px);background-size:16px 16px;min-width:0}#ncl-demo .map-root{background:var(--wine);color:var(--paper);padding:18px;text-align:center;font-size:10px;letter-spacing:0.5px;max-width:310px;margin:auto}#ncl-demo .map-root strong{display:block;font-size:16px;letter-spacing:0;font-weight:600}#ncl-demo .root-line{height:24px;border-left:1px solid var(--quiet);width:0;margin:auto}#ncl-demo .main-branches{display:grid;grid-template-columns:1fr 1fr;gap:12px}#ncl-demo .map-canvas button{padding:12px;background:var(--panel);border:1px solid var(--rule);color:var(--ink);text-align:left;line-height:1.5;font-size:13px;width:100%;transition:background .2s,border-color .2s}#ncl-demo .map-canvas button[aria-pressed=true]{border-color:var(--wine);background:var(--tint);box-shadow:inset 3px 0 var(--wine)}#ncl-demo .map-canvas button:hover{border-color:var(--wine)}#ncl-demo .edge-caption{text-align:center;font-size:11px;color:var(--quiet);padding:13px 0}#ncl-demo .group-list{display:grid;gap:8px}#ncl-demo .leaf-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}#ncl-demo .leaf-list button{font-size:12px}#ncl-demo .reader{background:var(--panel);border-left:1px solid var(--rule);padding:28px;min-width:0}#ncl-demo .reader .eyebrow{font-size:10px;letter-spacing:1px}#ncl-demo .reader h3{font-size:27px;color:var(--wine)}#ncl-demo .reader p{font-size:14px}#ncl-demo .source-note{font-size:11px;color:var(--quiet);border-top:1px solid var(--rule);padding-top:14px;margin-top:22px}#ncl-demo .reader blockquote{margin:20px 0;padding-left:16px;border-left:2px solid var(--wine);font-family:'Lora','Times New Roman',Times,serif}#ncl-demo .bridge{background:var(--tint);padding:54px 25px;text-align:center;border-block:1px solid var(--rule)}#ncl-demo .bridge>span{font-size:10px;letter-spacing:1px;color:var(--wine)}#ncl-demo .bridge h2{margin-top:20px}#ncl-demo .bridge p{font-size:14px;color:var(--quiet)}#ncl-demo .chapter{display:grid;grid-template-columns:70px 1fr;gap:24px;padding:30px 0;border-top:1px solid var(--rule)}#ncl-demo .chapter-number{font:45px 'Lora','Times New Roman',Times,serif;color:var(--wine)}#ncl-demo .chapter h3{font-size:28px;margin-bottom:12px}#ncl-demo .chapter-intro{color:var(--quiet);max-width:650px}#ncl-demo details{border-bottom:1px solid var(--rule);padding:10px 0}#ncl-demo summary{padding:8px 0;font-size:14px}#ncl-demo details details{margin-left:16px}#ncl-demo details p{font-size:14px}#ncl-demo .chapter .source-note{margin:16px 0}#ncl-demo .discussion{background:var(--tint)}#ncl-demo .discussion-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:34px}#ncl-demo .tag{font-size:10px;letter-spacing:1px;color:var(--wine)}#ncl-demo .discussion h3{margin:16px 0}#ncl-demo .answers{display:grid;gap:9px;margin:20px 0}#ncl-demo .answers button{padding:12px;text-align:left;color:var(--ink);background:var(--panel);border:1px solid var(--rule);font-size:13px}#ncl-demo .answers button[aria-pressed=true]{border-color:var(--wine);color:var(--wine)}#ncl-demo #ncl-feedback{font-size:13px;color:var(--wine)}#ncl-demo .practical{border-left:1px solid var(--rule);padding-left:30px}#ncl-demo .practical ol{padding-left:20px}#ncl-demo .source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px}#ncl-demo .source-grid h3{font-size:18px}#ncl-demo .source-grid p{font-size:13px;color:var(--quiet)}#ncl-demo footer{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--rule);padding:24px 38px;font-size:11px;color:var(--quiet)}#ncl-demo footer .brand{font-size:12px;color:var(--wine)}
+@media(max-width:720px){#ncl-demo .edition{display:none}#ncl-demo .ncl-nav{padding:18px 22px;flex-wrap:wrap}#ncl-demo .hero{padding:38px 24px;gap:24px}#ncl-demo h1{font-size:64px}#ncl-demo .hero-art{padding:20px;min-height:370px}#ncl-demo .hero-art blockquote{font-size:29px}#ncl-demo .section{padding:44px 22px}#ncl-demo .map-shell{grid-template-columns:1fr}#ncl-demo .reader{border-left:0;border-top:1px solid var(--rule)}#ncl-demo .section-top{align-items:start}#ncl-demo .discussion-grid{gap:25px}#ncl-demo .source-grid{grid-template-columns:1fr}#ncl-demo .journey{padding:18px 22px}}
+@media(max-width:480px){#ncl-demo .hero{grid-template-columns:1fr}#ncl-demo .hero-art{min-height:280px}#ncl-demo .hero-art blockquote{margin-top:40px}#ncl-demo h2{font-size:34px}#ncl-demo .section-top{flex-direction:column}#ncl-demo .discussion-grid{grid-template-columns:1fr}#ncl-demo .practical{border-left:0;border-top:1px solid var(--rule);padding:25px 0 0}#ncl-demo .chapter{grid-template-columns:36px 1fr;gap:12px}#ncl-demo .chapter-number{font-size:30px}#ncl-demo .chapter h3{font-size:24px}#ncl-demo .map-canvas{padding:20px 12px}#ncl-demo .leaf-list{grid-template-columns:1fr}#ncl-demo nav{gap:14px}#ncl-demo .journey{flex-direction:column}#ncl-demo .reader{padding:22px}#ncl-demo .hero-sub{font-size:18px}}
+@media(prefers-reduced-motion:reduce){#ncl-demo *{transition:none!important;scroll-behavior:auto!important}}
+
+
+
+#ncl-demo .map-root{max-width:none;text-align:left;border-radius:12px;padding:22px;font-size:10px}
+#ncl-demo .map-root strong{margin-top:10px}
+#ncl-demo .main-branches{display:block;margin-left:12px;border-left:1px solid var(--rule);padding-left:18px}
+#ncl-demo .tree-item{position:relative;padding-top:20px}
+#ncl-demo .tree-relation{font-size:10px;color:var(--quiet);margin:0 0 7px 5px;letter-spacing:.3px}
+#ncl-demo .tree-button{display:flex;align-items:center;gap:10px;position:relative;border-radius:12px;min-height:58px}
+#ncl-demo .tree-button:before{content:'';position:absolute;left:-19px;top:50%;width:18px;height:1px;background:var(--rule)}
+#ncl-demo .tree-title{flex:1;min-width:0}
+#ncl-demo .tree-number{font-size:11px;color:var(--wine)}
+#ncl-demo .tree-sign{flex:0 0 23px;height:23px;border:1px solid var(--rule);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--wine)}
+#ncl-demo .tree-button[aria-expanded=true]{background:var(--tint);border-color:var(--wine);box-shadow:inset 3px 0 var(--wine);color:var(--wine)}
+#ncl-demo .tree-button[aria-expanded=true] .tree-sign{background:var(--wine);border-color:var(--wine);color:var(--paper)}
+#ncl-demo .tree-children{margin-left:10px;border-left:1px solid var(--rule);padding-left:16px}
+#ncl-demo .tree-children[hidden]{display:none}
+#ncl-demo .tree-children .tree-button:before{left:-17px;width:16px}
+#ncl-demo .tree-caption{font-size:11px;color:var(--quiet);margin-top:28px}
+@media(max-width:480px){#ncl-demo .tree-children{margin-left:3px;padding-left:10px}#ncl-demo .tree-children .tree-button:before{left:-11px;width:10px}#ncl-demo .tree-button{gap:7px;padding:10px}#ncl-demo .tree-sign{flex-basis:21px;height:21px}}
+
+
+
+#ncl-demo .map-shell{position:relative;display:grid;grid-template-columns:minmax(0,1fr);border:0;gap:0;align-items:start;transition:grid-template-columns .35s ease,gap .35s ease}
+#ncl-demo .map-shell.is-reading{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px}
+#ncl-demo .map-canvas{border:1px solid var(--rule);border-radius:14px;padding:32px;transition:padding .35s ease}
+#ncl-demo .map-root{padding:26px;font-size:12px}
+#ncl-demo .map-root strong{font-size:21px}
+#ncl-demo .map-canvas .tree-button{font-size:17px;min-height:66px;padding:16px}
+#ncl-demo .map-canvas .tree-relation{font-size:12px}
+#ncl-demo .is-reading .map-canvas{padding:20px}
+#ncl-demo .is-reading .map-root{padding:20px;font-size:10px}
+#ncl-demo .is-reading .map-root strong{font-size:16px}
+#ncl-demo .is-reading .tree-button{font-size:13px;min-height:55px;padding:12px}
+#ncl-demo .reader{position:relative;border:1px solid var(--wine);border-radius:12px;padding:26px;background:var(--panel);margin-top:28px;z-index:1}
+#ncl-demo .reader[hidden]{display:none}
+#ncl-demo .close-reading{display:block;margin:0 0 22px auto;border:1px solid var(--rule);background:var(--paper);color:var(--wine);border-radius:6px;padding:8px 12px;font-size:12px}
+#ncl-demo .reading-connector{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+#ncl-demo .reading-connector path{fill:none;stroke:var(--wine);stroke-width:1.5}
+@media(max-width:720px){#ncl-demo .map-shell.is-reading{grid-template-columns:minmax(0,1fr);gap:0}#ncl-demo .reader{margin-top:24px}#ncl-demo .reader:before{content:'';position:absolute;left:30px;top:-25px;height:24px;width:1px;background:var(--wine)}#ncl-demo .map-canvas{padding:22px}#ncl-demo .map-canvas .tree-button{font-size:15px}#ncl-demo .map-root strong{font-size:18px}}
+
+
+
+#ncl-demo .map-shell{grid-template-columns:minmax(0,1fr) minmax(0,0fr);transition:grid-template-columns .4s cubic-bezier(.22,1,.36,1),gap .4s cubic-bezier(.22,1,.36,1)}
+#ncl-demo .map-shell.is-reading{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+#ncl-demo .map-canvas,#ncl-demo .is-reading .map-canvas{padding:24px}
+#ncl-demo .map-root,#ncl-demo .is-reading .map-root{padding:22px;font-size:11px}
+#ncl-demo .map-root strong,#ncl-demo .is-reading .map-root strong{font-size:18px}
+#ncl-demo .map-canvas .tree-button,#ncl-demo .is-reading .tree-button{font-size:15px;min-height:60px;padding:14px}
+#ncl-demo .reader{align-self:start;min-width:0;margin-top:0;overflow-wrap:anywhere}
+#ncl-demo .reader .close-reading{width:auto;min-height:44px;font-size:12px;padding:8px 12px}
+#ncl-demo .reader .source-note{font-size:12px}
+@media(max-width:720px){#ncl-demo .map-shell,#ncl-demo .map-shell.is-reading{grid-template-columns:minmax(0,1fr);gap:0}#ncl-demo .map-canvas,#ncl-demo .is-reading .map-canvas{padding:16px}#ncl-demo .reader{padding:18px;margin-bottom:18px}#ncl-demo .reader:before{left:24px;top:-17px;height:16px}#ncl-demo .reader h3{font-size:24px}#ncl-demo .map-canvas .reader button{width:auto}}
+@media(prefers-reduced-motion:reduce){#ncl-demo .map-shell{transition:none}}
+
+#ncl-demo .map-shell { overflow-anchor: none; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ==========================================================================
+   BỔ SUNG CHO HỌC PHẦN HCM202 - GROUP7
+   ========================================================================== */
+
+#ncl-demo .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 22px; }
+#ncl-demo .action.outline { border: 1px solid var(--wine); color: var(--wine); background: transparent; padding: 12px 18px; font-size: 13px; display: inline-flex; gap: 8px; align-items: center; border-radius: 4px; transition: background .2s, color .2s; }
+#ncl-demo .action.outline:hover { background: var(--wine); color: var(--paper); }
+#ncl-demo .action.solid { border-radius: 4px; border: 1px solid var(--wine); transition: opacity .2s; }
+#ncl-demo .action.solid:hover { opacity: .9; }
+
+/* PHÂN TÍCH LÝ LUẬN CỦA NHÓM (GROUP7) TẠI BRIDGE */
+#ncl-demo .bridge-analysis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; text-align: left; }
+#ncl-demo .analysis-box { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+#ncl-demo .analysis-box h3 { font-size: 17px; color: var(--wine); margin-bottom: 12px; line-height: 1.35; }
+#ncl-demo .analysis-box p { font-size: 13.5px; line-height: 1.65; color: var(--ink); margin: 0; }
+#ncl-demo .group-analysis-paragraph { background: var(--tint); border-left: 3px solid var(--wine); padding: 12px 16px; border-radius: 0 6px 6px 0; font-weight: 500; color: var(--ink); margin: 16px 0 !important; }
+
+/* CASE STUDY LIÊN HỆ THỰC TIỄN ĐIỂN HÌNH */
+#ncl-demo .practical-case-section { background: var(--paper); border-top: 1px solid var(--rule); }
+#ncl-demo .case-study-card { background: var(--panel); border: 1px solid var(--rule); border-top: 4px solid var(--wine); border-radius: 12px; padding: 36px; margin-top: 24px; }
+#ncl-demo .case-meta { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+#ncl-demo .badge { font-size: 11px; font-weight: 600; letter-spacing: 1px; background: var(--wine); color: #fff; padding: 4px 10px; border-radius: 4px; }
+#ncl-demo .case-date { font-size: 13px; color: var(--quiet); font-style: italic; }
+#ncl-demo .case-title { font-size: 26px; color: var(--ink); margin: 0 0 24px 0; line-height: 1.28; }
+#ncl-demo .case-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+#ncl-demo .case-col h4 { font-size: 16px; color: var(--wine); margin: 0 0 12px 0; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
+#ncl-demo .case-col ul { padding-left: 20px; margin: 0; font-size: 13.5px; line-height: 1.65; }
+#ncl-demo .case-col li { margin-bottom: 12px; }
+#ncl-demo .case-group-comment { margin-top: 28px; padding-top: 20px; border-top: 1px dashed var(--rule); background: var(--tint); padding: 22px; border-radius: 8px; }
+#ncl-demo .case-group-comment h4 { font-size: 16px; color: var(--wine); margin: 0 0 10px 0; }
+#ncl-demo .case-group-comment p { font-size: 14px; line-height: 1.7; margin: 0 0 12px 0; }
+#ncl-demo .source-tag { font-size: 12px; color: var(--quiet); font-style: italic; }
+
+/* ==========================================================================
+   CHẶNG 03: HỎI ĐÁP & THẢO LUẬN TƯƠNG TÁC CÙNG NGƯỜI NGHE (TRẮC NGHIỆM ABCD)
+   ========================================================================== */
+#ncl-demo .qa-grid { display: grid; gap: 24px; margin-top: 28px; }
+#ncl-demo .qa-card { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 26px 30px; transition: border-color .2s, box-shadow .2s; }
+#ncl-demo .qa-card:hover { border-color: var(--wine); }
+#ncl-demo .qa-card.is-open { border-color: var(--wine); box-shadow: 0 4px 18px rgba(133, 44, 46, 0.08); }
+#ncl-demo .qa-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+#ncl-demo .qa-num { font-family: 'Lora', 'Times New Roman', Times, serif; font-size: 24px; font-weight: 700; color: var(--wine); line-height: 1; }
+#ncl-demo .qa-topic { font-size: 11px; font-weight: 600; letter-spacing: 0.8px; background: var(--wine); color: #fff; padding: 4px 10px; border-radius: 4px; }
+#ncl-demo .qa-question { font-family: 'Lora', 'Times New Roman', Times, serif; font-size: 19px; line-height: 1.45; color: var(--ink); margin: 0 0 18px 0; font-weight: 600; letter-spacing: normal; }
+
+/* LƯỚI ĐÁP ÁN ABCD */
+#ncl-demo .qa-options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+#ncl-demo .qa-opt-btn { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); text-align: left; cursor: pointer; transition: all .2s ease; width: 100%; box-sizing: border-box; }
+#ncl-demo .qa-opt-btn:hover { border-color: var(--wine); background: var(--tint); }
+#ncl-demo .qa-opt-btn .opt-letter { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--tint); color: var(--wine); font-weight: 700; font-size: 13px; flex-shrink: 0; transition: all .2s ease; }
+#ncl-demo .qa-opt-btn .opt-text { font-size: 13.5px; line-height: 1.5; color: var(--ink); flex: 1; }
+
+/* TRẠNG THÁI KẾT QUẢ ĐÚNG / SAI */
+#ncl-demo .qa-opt-btn.is-correct { border-color: #2e7d32; background: #edf7ee; box-shadow: inset 3px 0 #2e7d32; }
+#ncl-demo .qa-opt-btn.is-correct .opt-letter { background: #2e7d32; color: #fff; }
+#ncl-demo .qa-opt-btn.is-correct .opt-text { font-weight: 600; color: #1b5e20; }
+
+#ncl-demo .qa-opt-btn.is-wrong { border-color: #c62828; background: #fdf2f2; opacity: .85; }
+#ncl-demo .qa-opt-btn.is-wrong .opt-letter { background: #c62828; color: #fff; }
+#ncl-demo .qa-opt-btn.is-wrong .opt-text { text-decoration: line-through; color: #b71c1c; }
+
+/* PHẢN HỒI VÀ LUẬN GIẢI KHOA HỌC */
+#ncl-demo .qa-feedback { margin-top: 20px; padding-top: 18px; border-top: 1px dashed var(--rule); }
+#ncl-demo .qa-result-banner { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 6px; font-size: 13.5px; margin-bottom: 14px; }
+#ncl-demo .qa-result-banner.correct { background: #e8f5e9; color: #1b5e20; border: 1px solid #c8e6c9; }
+#ncl-demo .qa-result-banner.wrong { background: #ffebee; color: #b71c1c; border: 1px solid #ffcdd2; }
+#ncl-demo .qa-answer-content { font-size: 14px; line-height: 1.7; color: var(--ink); }
+#ncl-demo .qa-answer-content p { margin: 0 0 10px 0; color: var(--wine); font-weight: 600; }
+#ncl-demo .qa-answer-content ul { padding-left: 20px; margin: 0 0 14px 0; }
+#ncl-demo .qa-answer-content li { margin-bottom: 10px; }
+#ncl-demo .qa-answer-content .source-tag { margin-top: 14px; font-size: 12px; color: var(--quiet); font-style: italic; display: block; }
+
+/* DANH MỤC TƯ LIỆU THAM KHẢO & PHỤ LỤC MINH BẠCH AI */
+#ncl-demo .source-box { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 24px; }
+#ncl-demo .source-num { font-family: 'Lora', 'Times New Roman', Times, serif; font-size: 32px; color: var(--wine); line-height: 1; margin-bottom: 12px; }
+#ncl-demo .source-sublist { padding-left: 18px; margin: 10px 0 0 0; font-size: 12.5px; color: var(--quiet); line-height: 1.6; }
+#ncl-demo .ai-appendix-card { margin-top: 36px; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 20px 24px; }
+#ncl-demo .ai-appendix-card summary { font-size: 15px; color: var(--wine); display: flex; align-items: center; gap: 12px; padding: 8px 0; outline: none; cursor: pointer; }
+#ncl-demo .appendix-badge { font-size: 10px; font-weight: 600; background: var(--wine); color: #fff; padding: 3px 8px; border-radius: 4px; letter-spacing: 1px; }
+#ncl-demo .appendix-content { padding-top: 20px; border-top: 1px solid var(--rule); margin-top: 14px; }
+#ncl-demo .appendix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px; }
+#ncl-demo .appendix-grid h4 { font-size: 14px; color: var(--wine); margin: 0 0 8px 0; }
+#ncl-demo .appendix-grid p, #ncl-demo .appendix-grid ul { font-size: 13px; line-height: 1.65; margin: 0; }
+#ncl-demo .appendix-grid ul { padding-left: 18px; }
+#ncl-demo .appendix-grid li { margin-bottom: 8px; }
+#ncl-demo .appendix-block { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 18px; margin: 20px 0; }
+#ncl-demo .appendix-block h4 { margin: 0 0 14px 0; font-size: 14px; color: var(--wine); }
+#ncl-demo .prompt-item { margin-bottom: 14px; font-size: 12.5px; }
+#ncl-demo .prompt-item:last-child { margin-bottom: 0; }
+#ncl-demo .prompt-tag { font-weight: bold; color: var(--ink); display: block; margin-bottom: 4px; }
+#ncl-demo .prompt-item code { display: block; background: var(--tint); padding: 10px 14px; border-radius: 6px; font-family: Consolas, monospace; font-size: 12px; color: var(--ink); white-space: pre-wrap; line-height: 1.5; border: 1px solid var(--rule); }
+
+/* CHÂN TRANG */
+#ncl-demo footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 28px 38px; }
+#ncl-demo .footer-left { display: flex; flex-direction: column; gap: 4px; }
+#ncl-demo .footer-center { font-size: 12px; color: var(--quiet); }
+#ncl-demo .footer-right a { color: var(--wine); font-weight: 500; }
+
+/* RESPONSIVE DESIGN */
+@media(max-width:960px){
+  #ncl-demo .bridge-analysis { grid-template-columns: 1fr; }
+  #ncl-demo .case-content-grid { grid-template-columns: 1fr; }
+  #ncl-demo .discussion-grid { grid-template-columns: 1fr; }
+  #ncl-demo .appendix-grid { grid-template-columns: 1fr; }
+}
+@media(max-width:720px){
+  #ncl-demo .case-study-card { padding: 22px; }
+  #ncl-demo .qa-card { padding: 20px 16px; }
+  #ncl-demo .qa-options-grid { grid-template-columns: 1fr; }
+}
+@media(max-width:480px){
+  #ncl-demo .hero-actions { flex-direction: column; align-items: stretch; }
+  #ncl-demo .action { justify-content: center; }
+}
+
+/* CÂU HỎI DẪN NHẬP (CHẶNG 1) */
+#ncl-demo .intro-poll-section { padding: 40px 38px 24px; background: var(--panel); border-bottom: 1px solid var(--rule); }
+#ncl-demo .intro-poll-container { max-width: 960px; margin: 0 auto; background: var(--paper); border: 1px solid var(--rule); border-top: 3px solid var(--wine); border-radius: 12px; padding: 28px; }
+#ncl-demo .intro-poll-badge { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--wine); margin-bottom: 10px; }
+#ncl-demo .intro-poll-title { font-size: 20px; color: var(--ink); margin: 0 0 20px 0; line-height: 1.35; }
+#ncl-demo .intro-poll-grid { display: grid; gap: 10px; }
+#ncl-demo .intro-btn { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 1px solid var(--rule); border-radius: 8px; background: var(--panel); text-align: left; cursor: pointer; transition: all .2s; }
+#ncl-demo .intro-btn:hover { border-color: var(--wine); background: var(--tint); }
+#ncl-demo .intro-btn.active, #ncl-demo .intro-btn[aria-pressed=true] { border-color: var(--wine); background: var(--tint); box-shadow: inset 3px 0 var(--wine); }
+#ncl-demo .intro-opt-letter { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: var(--tint); color: var(--wine); font-weight: 700; font-size: 12px; flex-shrink: 0; }
+#ncl-demo .intro-btn.active .intro-opt-letter { background: var(--wine); color: var(--paper); }
+#ncl-demo .intro-opt-text { font-size: 13.5px; color: var(--ink); font-weight: 500; }
+#ncl-demo .intro-feedback { margin-top: 18px; padding: 16px; background: var(--tint); border-left: 3px solid var(--wine); border-radius: 0 8px 8px 0; font-size: 13.5px; line-height: 1.6; color: var(--ink); }
+
+/* NÚT QUAY LẠI TỔNG KẾT (CHẶNG 8) */
+#ncl-demo .discuss-summary-action { margin-top: 36px; padding: 24px; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; text-align: center; }
+#ncl-demo .summary-tip { font-size: 13px; color: var(--quiet); margin: 0 0 14px 0; }
+#ncl-demo .return-map-btn { font-size: 14px; font-weight: 600; padding: 14px 28px; }
+
+
