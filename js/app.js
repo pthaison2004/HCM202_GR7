@@ -18,6 +18,22 @@ function el(tag, text, cls) {
 }
 
 function fillReading(node, target) {
+  if (node.image) {
+    const fig = el('figure', null, 'reader-figure');
+    const img = document.createElement('img');
+    img.src = node.image;
+    img.alt = node.imageCaption || node.title;
+    img.className = 'reader-img';
+    img.loading = 'lazy';
+    img.onload = () => {
+      if (typeof scheduleConnector === 'function') scheduleConnector();
+    };
+    fig.appendChild(img);
+    if (node.imageCaption) {
+      fig.appendChild(el('figcaption', node.imageCaption, 'reader-figcaption'));
+    }
+    target.appendChild(fig);
+  }
   node.body.forEach(t => {
     const p = el('p', t);
     if (t.startsWith('Phân tích của nhóm (GROUP7):') || t.startsWith('Phân tích của nhóm:')) {
@@ -240,7 +256,7 @@ qa('.qa-card').forEach(card => {
 const introFeedbacks = [
   '<strong>Gợi mở lý luận:</strong> Quần chúng nhân dân là người sáng tạo ra lịch sử, có sức mạnh dời non lấp biển. Tuy nhiên, nếu không có một chính đảng vô sản dẫn đường với lý luận khoa học và cương lĩnh đúng đắn, các phong trào đấu tranh dù anh dũng cũng sẽ dừng lại ở mức tự phát và bế tắc.',
   '<strong>Gợi mở lý luận:</strong> Đảng giữ sứ mệnh định hướng và tổ chức như người cầm lái con thuyền. Nhưng nếu Đảng xa rời quần chúng, không gắn bó máu thịt với nhân dân thì tổ chức dù có đường lối cũng sẽ không có lực lượng cách mạng hiện thực.',
-  '<strong>Chính xác — Luận điểm cốt lõi của Hồ Chí Minh:</strong> Quần chúng nhân dân là nguồn lực lượng vô địch, nhưng sức mạnh ấy chỉ chuyển hóa thành thắng lợi khi có Đảng cách mạng kiên trung làm "Người cầm lái". Bấm vào <em>Khám phá Concept Map</em> ngay dưới đây để cùng phân tích!'
+  '<strong>Chính xác — Luận điểm cốt lõi của Hồ Chí Minh:</strong> Quần chúng nhân dân là nguồn lực lượng vô địch, nhưng sức mạnh ấy chỉ chuyển hóa thành thắng lợi khi có Đảng cách mạng kiên trung làm "Người cầm lái". Hãy cùng theo dõi <em>Lược sử Đảng Cộng sản Việt Nam</em> ngay dưới đây để thấy rõ minh chứng thực tiễn trước khi phân tích Bản đồ tư tưởng!'
 ];
 
 qa('[data-intro]').forEach(btn => {

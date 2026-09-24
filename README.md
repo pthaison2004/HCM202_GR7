@@ -16,21 +16,22 @@ Dự án được xây dựng bằng HTML5, CSS3 và JavaScript thuần (Vanilla
 
 ---
 
-## 2. Cấu trúc kịch bản báo cáo (30 phút — 9 Chặng)
+## 2. Cấu trúc kịch bản báo cáo (30 phút)
 
 Khớp với kịch bản thuyết trình đề tài:
 
-| Chặng | Nội dung trọng tâm | Phương thức thể hiện | Thời lượng |
-| :---: | :--- | :--- | :---: |
-| **01** | **Mở đầu:** Giới thiệu môn học HCM202, nhóm GROUP7 và câu hỏi dẫn nhập | Màn hình Hero & câu hỏi tương tác | 2 phút |
+| Chặng / Phần | Nội dung trọng tâm | Phương thức thể hiện | Thời lượng |
+| :---: | :--- | :--- | :--- |
+| **01** | **Mở đầu & Dẫn nhập:** Giới thiệu môn học HCM202, nhóm GROUP7 và câu hỏi trắc nghiệm kích hoạt tư duy | Hero banner & câu hỏi tương tác | 2 phút |
+| **Bối cảnh** | **Lược sử Đảng Cộng sản Việt Nam:** 10 mốc son lịch sử (1920 – nay) làm tiền đề thực tiễn cho lý luận | Dòng thời gian trực quan (Timeline) & ảnh tư liệu Phan Kế An | 3 phút |
 | **02** | **Bản đồ tổng quan:** Hai nhánh lớn (I, II) và mối quan hệ hữu cơ | Concept Map tương tác mở dần | 2 phút |
-| **03** | **Tính tất yếu & vai trò lãnh đạo:** Người cầm lái, 3 yếu tố, tính tất yếu lịch sử | Map kết hợp khung giải thích & trích dẫn | 5 phút |
+| **03** | **Tính tất yếu & vai trò lãnh đạo:** Người cầm lái, 3 yếu tố, tính tất yếu lịch sử | Map kết hợp khung giải thích & trích dẫn | 4 phút |
 | **04** | **Đảng là đạo đức, là văn minh:** Mục đích, đường lối, đảng viên, nhân dân, quốc tế | 5 nhóm nội dung có dẫn chứng kinh điển | 4 phút |
-| **05** | **Nguyên tắc hoạt động:** 5 nguyên tắc và tập thể lãnh đạo - cá nhân phụ trách | Sơ đồ quan hệ và tình huống giải định | 5 phút |
+| **05** | **Nguyên tắc hoạt động:** 5 nguyên tắc và tập thể lãnh đạo - cá nhân phụ trách | Sơ đồ quan hệ và phân tích bản chất | 4 phút |
 | **06** | **Cán bộ, đảng viên:** Tiêu chuẩn vừa hồng vừa chuyên, 4 khâu công tác cán bộ | Nhánh mở rộng & phân tích vận dụng | 4 phút |
 | **07** | **Liên hệ thực tiễn:** Trường hợp Kết luận 21-KL/TW & Quy định 144-QĐ/TW | Phân tích từ lý luận đến thực tiễn | 3 phút |
-| **08** | **Thảo luận & tổng kết:** Khảo sát định lượng & câu hỏi mở nhiều người tham gia | Bình chọn trực tiếp & xuất kết quả | 3 phút |
-| **09** | **Nguồn & minh bạch AI:** Danh mục thư tịch chính thống & báo cáo độc lập của nhóm | Thư mục trích dẫn & phụ lục AI | 2 phút |
+| **08** | **Hỏi đáp & Thảo luận:** 4 câu hỏi trắc nghiệm tương tác kiểm tra nhận thức thính giả | Trắc nghiệm ABCD & đối chiếu kết quả | 3 phút |
+| **09** | **Nguồn & minh bạch AI:** Danh mục thư tịch chính thống & báo cáo độc lập của nhóm | Thư mục trích dẫn & phụ lục AI | 1 phút |
 
 ---
 

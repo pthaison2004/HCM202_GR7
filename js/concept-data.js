@@ -8,7 +8,7 @@
 
 (() => {
 const N = (title, children, relation = 'gồm') => ({ title, children, relation });
-const L = (title, body, source, quote = '') => ({ title, body, source, quote });
+const L = (title, body, source, quote = '', image = '', imageCaption = '') => ({ title, body, source, quote, image, imageCaption });
 
 const data = [
   N('I. Tính tất yếu & vai trò lãnh đạo của Đảng', [
@@ -199,7 +199,10 @@ const data = [
           'Tập trung phải dựa trên nền tảng dân chủ rộng rãi, và dân chủ phải đi đến sự tập trung thống nhất về ý chí và hành động. Đảng viên có quyền bàn bạc, thảo luận thẳng thắn; khi nghị quyết đã thông qua thì thiểu số phục tùng đa số, cấp dưới phục tùng cấp trên, toàn Đảng phục tùng Trung ương.',
           'Phân tích của nhóm (GROUP7): Tập thể lãnh đạo đi đôi với cá nhân phụ trách. Tập thể lãnh đạo để phát huy trí tuệ sáng suốt; cá nhân phụ trách để xác định rõ trách nhiệm, ngăn chặn thói đùn đẩy hoặc tình trạng độc đoán chuyên quyền làm tê liệt sức chiến đấu của tổ chức.'
         ],
-        'Hồ Chí Minh: Toàn tập, Nxb Chính trị quốc gia Sự thật, Hà Nội, 2011, t. 5, tr. 280–309; Giáo trình Tư tưởng Hồ Chí Minh, 2021, tr. 73.'
+        'Hồ Chí Minh: Toàn tập, Nxb Chính trị quốc gia Sự thật, Hà Nội, 2011, t. 5, tr. 280–309; Giáo trình Tư tưởng Hồ Chí Minh, 2021, tr. 73.',
+        '',
+        'img/nguyen-tac-tap-trung-dan-chu.png',
+        'Sơ đồ nguyên lý: Dân chủ là cơ sở của tập trung — Tập trung trên cơ sở dân chủ. Hai yếu tố có quan hệ biện chứng chặt chẽ và thống nhất.'
       ),
       L(
         'Tự phê bình và phê bình: Quy luật phát triển của Đảng',
@@ -225,7 +228,9 @@ const data = [
           'Cơ sở của sự đoàn kết nhất trí là chủ nghĩa Mác – Lênin, Cương lĩnh chính trị, Điều lệ Đảng và mục tiêu phụng sự Tổ quốc, phụng sự nhân dân.'
         ],
         'Hồ Chí Minh: Toàn tập, Nxb Chính trị quốc gia Sự thật, Hà Nội, 2011, t. 15, tr. 611–612 (Di chúc); Giáo trình Tư tưởng Hồ Chí Minh, 2021, tr. 74–75.',
-        '“Các đồng chí từ Trung ương đến các chi bộ cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn con ngươi của mắt mình.”'
+        '“Các đồng chí từ Trung ương đến các chi bộ cần phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn con ngươi của mắt mình.”',
+        'img/doan-ket-la-suc-manh-cua-dang.png',
+        'Tranh cổ động: "Đoàn kết là sức mạnh của Đảng" — Giữ gìn sự đoàn kết nhất trí như giữ gìn con ngươi của mắt mình.'
       ),
       L(
         'Lấy chủ nghĩa Mác – Lênin làm nền tảng tư tưởng, kim chỉ nam',

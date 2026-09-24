@@ -202,4 +202,78 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px soli
 #ncl-demo .summary-tip { font-size: 13px; color: var(--quiet); margin: 0 0 14px 0; }
 #ncl-demo .return-map-btn { font-size: 14px; font-weight: 600; padding: 14px 28px; }
 
+/* ==========================================================================
+   LƯỢC SỬ ĐẢNG CỘNG SẢN VIỆT NAM (BỐI CẢNH LỊCH SỬ DẪN NHẬP)
+   ========================================================================== */
+#ncl-demo .history-section { background: var(--paper); border-bottom: 1px solid var(--rule); padding: 64px 38px; }
+#ncl-demo .history-lead { font-size: 14.5px; line-height: 1.65; color: var(--ink); max-width: 580px; background: var(--tint); padding: 16px 20px; border-left: 3px solid var(--wine); border-radius: 0 8px 8px 0; margin: 0; }
+#ncl-demo .history-timeline { position: relative; max-width: 920px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 0; }
+#ncl-demo .history-timeline::before { content: ''; position: absolute; top: 24px; bottom: 24px; left: 20px; width: 2px; background: var(--rule); z-index: 0; }
+#ncl-demo .history-item { position: relative; display: flex; gap: 24px; padding-bottom: 32px; z-index: 1; }
+#ncl-demo .history-item:last-child { padding-bottom: 0; }
+#ncl-demo .history-dot { flex: 0 0 42px; height: 42px; border-radius: 50%; background: var(--panel); border: 2px solid var(--wine); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px var(--paper); transition: transform .2s, background .2s; }
+#ncl-demo .history-dot-inner { width: 12px; height: 12px; border-radius: 50%; background: var(--wine); }
+#ncl-demo .history-item:hover .history-dot { transform: scale(1.1); background: var(--tint); }
+#ncl-demo .history-card { flex: 1; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 22px 26px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); transition: border-color .2s, box-shadow .2s; }
+#ncl-demo .history-card:hover { border-color: var(--wine); box-shadow: 0 4px 16px rgba(133, 44, 46, 0.06); }
+#ncl-demo .history-time-badge { display: inline-block; font-family: 'Lora', 'Times New Roman', serif; font-weight: 700; font-size: 15px; color: var(--wine); background: var(--tint); padding: 4px 12px; border-radius: 6px; margin-bottom: 10px; letter-spacing: 0.5px; }
+#ncl-demo .history-title { font-family: 'Lora', 'Times New Roman', serif; font-size: 18px; font-weight: 600; color: var(--ink); margin: 0 0 10px 0; line-height: 1.35; }
+#ncl-demo .history-text { font-size: 13.8px; line-height: 1.7; color: var(--ink); margin: 0; }
+
+/* Thẻ nổi bật cho mốc 1930 kèm tranh */
+#ncl-demo .history-featured .history-card { border-color: var(--wine); background: var(--panel); box-shadow: 0 4px 20px rgba(133, 44, 46, 0.08); }
+#ncl-demo .history-featured .history-dot { background: var(--wine); border-color: var(--wine); }
+#ncl-demo .history-featured .history-dot-inner { background: var(--paper); }
+#ncl-demo .history-featured-layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px; align-items: start; }
+#ncl-demo .history-painting-box { background: #fdfbf7; border: 1px solid var(--rule); border-radius: 8px; padding: 12px; box-shadow: inset 0 0 10px rgba(0,0,0,0.02); }
+#ncl-demo .history-painting-img { width: 100%; height: auto; border-radius: 6px; display: block; border: 1px solid var(--rule); }
+#ncl-demo .history-painting-cap { font-size: 12px; color: var(--quiet); line-height: 1.55; margin-top: 10px; font-style: italic; border-top: 1px dashed var(--rule); padding-top: 8px; }
+#ncl-demo .history-subevents { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--rule); }
+#ncl-demo .history-subevent-item { margin-top: 10px; }
+#ncl-demo .history-subevent-time { font-weight: 700; color: var(--wine); font-size: 13px; margin-right: 6px; }
+
+/* Banner chuyển tiếp sang Concept Map */
+#ncl-demo .history-bridge-card { max-width: 920px; margin: 40px auto 0; background: var(--tint); border: 1px solid var(--rule); border-left: 4px solid var(--wine); border-radius: 10px; padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+#ncl-demo .history-bridge-text h4 { font-family: 'Lora', 'Times New Roman', serif; font-size: 17px; color: var(--wine); margin: 0 0 6px 0; }
+#ncl-demo .history-bridge-text p { font-size: 13.5px; line-height: 1.6; color: var(--ink); margin: 0; }
+
+@media(max-width: 768px) {
+  #ncl-demo .history-featured-layout { grid-template-columns: 1fr; }
+  #ncl-demo .history-bridge-card { flex-direction: column; align-items: flex-start; }
+}
+@media(max-width: 520px) {
+  #ncl-demo .history-timeline::before { left: 15px; }
+  #ncl-demo .history-dot { flex: 0 0 32px; height: 32px; }
+  #ncl-demo .history-item { gap: 14px; }
+  #ncl-demo .history-card { padding: 18px 16px; }
+}
+
+/* ==========================================================================
+   TƯ LIỆU HÌNH ẢNH MINH HỌA (READER, BRIDGE & Q&A)
+   ========================================================================== */
+
+/* Hình ảnh trong Reader panel của Concept Map */
+#ncl-demo .reader-figure { margin: 16px 0 20px 0; padding: 10px; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; text-align: center; }
+#ncl-demo .reader-img { max-width: 100%; max-height: 380px; width: auto; height: auto; object-fit: contain; border-radius: 6px; display: block; margin: 0 auto; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+#ncl-demo .reader-figcaption { font-size: 12px; color: var(--quiet); margin-top: 8px; line-height: 1.5; font-style: italic; border-top: 1px dashed var(--rule); padding-top: 6px; }
+
+/* Tư liệu hình ảnh tại Bridge (Cầu nối lý luận) */
+#ncl-demo .bridge-visuals { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; text-align: left; }
+#ncl-demo .bridge-visual-card { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,0.02); transition: border-color .2s, box-shadow .2s; }
+#ncl-demo .bridge-visual-card:hover { border-color: var(--wine); box-shadow: 0 4px 16px rgba(133, 44, 46, 0.08); }
+#ncl-demo .bridge-visual-img-wrap { background: #fdfbf7; border: 1px solid var(--rule); border-radius: 8px; padding: 12px; display: flex; align-items: center; justify-content: center; min-height: 260px; margin-bottom: 16px; }
+#ncl-demo .bridge-visual-img-wrap img { max-width: 100%; max-height: 280px; height: auto; width: auto; object-fit: contain; border-radius: 4px; }
+#ncl-demo .bridge-visual-info h4 { font-size: 16px; color: var(--wine); margin: 0 0 8px 0; font-family: 'Lora', 'Times New Roman', serif; }
+#ncl-demo .bridge-visual-info p { font-size: 13.5px; line-height: 1.65; color: var(--ink); margin: 0; }
+
+/* Minh họa hình ảnh trong câu hỏi phản hồi Q&A */
+#ncl-demo .qa-img-highlight { margin: 14px 0; padding: 12px; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; text-align: center; max-width: 480px; }
+#ncl-demo .qa-img-highlight img { max-width: 100%; max-height: 240px; width: auto; height: auto; object-fit: contain; border-radius: 4px; display: block; margin: 0 auto; }
+#ncl-demo .qa-caption { display: block; font-size: 12px; color: var(--quiet); margin-top: 6px; font-style: italic; }
+
+@media(max-width: 768px) {
+  #ncl-demo .bridge-visuals { grid-template-columns: 1fr; }
+}
+
+
 
